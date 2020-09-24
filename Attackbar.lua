@@ -98,11 +98,11 @@ function Abar_chat(msg)
 	elseif msg=="lock" then
 		Abar_Frame:Hide()
 		ebar_Frame:Hide()
-		fbar_frame:hide()
+		fbar_Frame:Hide()
 	elseif msg=="unlock" then
 		Abar_Frame:Show()
 		ebar_Frame:Show()
-		fbar_frame:show()
+		fbar_Frame:Show()
 	elseif msg=="range" then
 		abar.range= not(abar.range)
 		DEFAULT_CHAT_FRAME:AddMessage('range is'.. Abar_Boo(abar.range));
