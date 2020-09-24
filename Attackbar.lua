@@ -1,4 +1,4 @@
-﻿pont=0.000
+pont=0.000
 pofft= 0.000
 ont = 0.000
 offt= 0.000
@@ -229,7 +229,7 @@ function Abar_event(event)
 	
   if event == "COMBAT_LOG_EVENT_UNFILTERED" then
 	if arg3 and arg7 then
-		if arg3 == UnitGUID("player") and arg6 == UnitGUID("playertarget") and arg4 == UnitGUID("focus") then
+		if arg3 == UnitGUID("player") and arg6 == UnitGUID("playertarget") then
 			if arg2 == "SWING_DAMAGE" or arg2 == "SWING_MISSED" then
 				Abar_selfhit()
 				return
@@ -253,7 +253,7 @@ function Abar_event(event)
 				end
 		    end
 		end
-		if arg3 == UnitGUID("focus") and abar.mob == true then
+		if arg3 == UnitGUID("focus") and arg6 == UnitGUID("focustarget") and abar.mob == true then
 			if arg2 == "SWING_DAMAGE" or arg2 == "SWING_MISSED" then
 				fbar_set("")
 				
